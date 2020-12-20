@@ -5,9 +5,10 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
 
-        int a[], ans = 0;
+        int a[], ans = 0, N;
         for (int i = 0; i < T; i++) {
-
+            ans = 0;
+            N = sc.nextInt();
             a = new int[N];
 
             for (int j = 0; j < N; j++) {

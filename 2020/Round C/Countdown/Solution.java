@@ -5,8 +5,11 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
 
-        int a[], ans = 0;
+        int a[], ans = 0, N, K;
         for (int i = 0; i < T; i++) {
+            N = sc.nextInt();
+            K = sc.nextInt();
+            ans = 0;
 
             a = new int[N];
 
@@ -14,10 +17,21 @@ public class Solution {
                 a[j] = sc.nextInt();
             }
 
-            // some code here
+            boolean flag = true;
+            for (int j = 0; j < N - K + 1; j++) {
+                flag = true;
+                for (int k = j; k < j + K; k++) {
+                    if (a[k] != K + j - k) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    ans += 1;
+                }
+            }
 
             System.out.println("Case #" + (i + 1) + ": " + ans);
-
         }
     }
 }
