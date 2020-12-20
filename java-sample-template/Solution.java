@@ -5,19 +5,18 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
 
-        int a[], ans = 0, N;
-        for (int i = 0; i < T; i++) {
-            ans = 0;
-            N = sc.nextInt();
-            a = new int[N];
+        for (int t = 0; t < T; t++) {
+            int ans = 0;
+            int N = sc.nextInt();
+            int[] a = new int[N];
 
-            for (int j = 0; j < N; j++) {
-                a[j] = sc.nextInt();
+            for (int i = 0; i < N; i++) {
+                a[i] = sc.nextInt();
             }
 
             // some code here
 
-            System.out.println("Case #" + (i + 1) + ": " + ans);
+            System.out.println("Case #" + (t + 1) + ": " + ans);
 
         }
     }
